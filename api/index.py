@@ -1,6 +1,5 @@
 import os
 import sys
-import traceback
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -16,8 +15,8 @@ try:
 except Exception:
     pass
 
-# Configure serverless defaults: writable /tmp for audit log and absolute artifact paths
-os.environ.setdefault("ZEROTRUST_ENV", "demo")
+# Vercel serves the bundled synthetic demo; production OIDC belongs on Render/Docker.
+os.environ["ZEROTRUST_ENV"] = "demo"
 os.environ.setdefault("ZEROTRUST_AUDIT_PATH", "/tmp/audit-chain.jsonl")
 os.environ.setdefault("ZEROTRUST_PROCESSED_DIR", str(ROOT_DIR / "data" / "processed"))
 os.environ.setdefault("ZEROTRUST_QUARANTINE_DIR", str(ROOT_DIR / "data" / "quarantine"))
