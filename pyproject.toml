@@ -18,6 +18,9 @@ zerotrust-x = "zerotrust_x.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.vercel]
+entrypoint = "src.zerotrust_x.web:app"
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
