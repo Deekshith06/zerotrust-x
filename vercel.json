@@ -2,7 +2,7 @@
   "functions": {
     "api/index.py": {
       "runtime": "python3.12",
-      "includeFiles": ["src/**", "data/**"]
+      "includeFiles": "src/**,data/**"
     }
   },
   "rewrites": [
