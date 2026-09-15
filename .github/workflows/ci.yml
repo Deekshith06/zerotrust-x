@@ -1,0 +1,35 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e '.[dev]'
+      - name: Verify dependency lock pins
+        run: python - <<'PY'
+          from pathlib import Path
+          import importlib.metadata as metadata
+          for line in Path('requirements.lock').read_text().splitlines():
+              if not line or line.startswith('#'):
+                  continue
+              name, expected = line.split('==', 1)
+              actual = metadata.version(name)
+              assert actual == expected, f'{name}: {actual} != {expected}'
+          PY
+      - run: ruff check src tests scripts
+      - run: pytest -q
+      - name: Secret pattern check
+        run: |
+          ! grep -RInE '(AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|EC) PRIVATE KEY-----|password\s*=\s*[^$])' src tests docs .env.example

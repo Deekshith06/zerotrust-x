@@ -1,0 +1,12 @@
+# Generated from the current Python 3.14 verification environment.
+# Refresh deliberately when dependency versions change; CI installs pyproject.toml first.
+fastapi==0.141.1
+openpyxl==3.1.5
+polars==1.44.2
+pyarrow==25.0.1
+httpx2==2.13.0
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.16.7
+starlette==1.6.0
+anyio==4.15.1

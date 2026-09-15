@@ -1,0 +1,27 @@
+{
+  "dataset_version": "data-quality-v1",
+  "source_hashes": {
+    "track2_dataset_notes.txt": "f52b4a5dead99547c6270f3f76ea0a15c6ffb1b258e4fafe6d9c7c2702143ce3",
+    "track2_endpoint_alerts.xlsx": "cd43513e3e6d3ed7ada3e6db884aaf5e2167668041e5d492ace799fa2a5e9f92",
+    "track2_firewall_logs.csv": "1a2833a93832d53dd6c5e1204769bf1a72b0d5069d7ba17508fa6f11e381608c",
+    "track2_iam_audit_trail.json": "316acf81d46734caa9fc8d9fe3c9794d9ae5aa6bc29782e2028a655b344fc687",
+    "track2_identity_asset_master.csv": "b5a70c3d4936857d8210fe098adcda78819d9e7465bdf8e635c5475ce1fab117"
+  },
+  "raw_record_count": 62430,
+  "normalized_record_count": 62430,
+  "finding_count": 36220,
+  "affected_row_count": 29536,
+  "duplicate_count": 1430,
+  "detection_count": 1473,
+  "risk_identity_count": 3000,
+  "pipeline_status": "CLEAN_WITH_DOCUMENTED_EXCEPTIONS",
+  "pipeline_version": "0.1.0",
+  "rule_versions": {
+    "normalization": "normalize-2026-09-14-v2",
+    "baseline": "data-quality-v1"
+  },
+  "test_count": 24,
+  "test_status": "PASS",
+  "created_at": "2026-09-14T00:00:00Z",
+  "freeze_policy": "Downstream consumers must not modify this baseline; metric changes require a new dataset and pipeline version."
+}
