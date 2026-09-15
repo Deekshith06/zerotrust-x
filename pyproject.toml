@@ -7,7 +7,7 @@ name = "zerotrust-x"
 version = "0.1.0"
 description = "Deterministic multi-source security telemetry foundation"
 requires-python = ">=3.14,<3.15"
-dependencies = ["fastapi>=0.115", "openpyxl>=3.1", "polars>=1.0", "pyarrow>=17.0"]
+dependencies = ["fastapi>=0.115", "openpyxl>=3.1", "polars>=1.0", "pyarrow>=17.0", "uvicorn>=0.30"]
 
 [project.optional-dependencies]
 dev = ["httpx2>=0.1", "pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.8"]
