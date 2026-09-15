@@ -7,7 +7,7 @@ COPY src ./src
 COPY track2_cybersecurity_dataset_files ./track2_cybersecurity_dataset_files
 COPY data/baselines ./data/baselines
 
-RUN pip install --no-cache-dir . "uvicorn>=0.30" \
+RUN pip install --no-cache-dir ".[ingest]" "uvicorn>=0.30" \
     && python -m zerotrust_x.cli ingest \
         --input-dir track2_cybersecurity_dataset_files \
         --output-dir data/processed \

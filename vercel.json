@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/index.py": {
-      "includeFiles": "src/**,data/**"
+      "includeFiles": "{src/**,data/processed/**,data/quarantine/quarantine.parquet,data/baselines/**}"
     }
   },
   "rewrites": [
