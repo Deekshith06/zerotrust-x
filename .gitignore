@@ -10,8 +10,5 @@ coverage.xml
 htmlcov/
 data/audit.jsonl
 data/*.jsonl
-data/processed/*.parquet
-data/processed/*.json
-data/quarantine/*.parquet
 data/cleaned_raw/
 scratch/

@@ -1,0 +1,37 @@
+{
+  "classification_counts": {
+    "DUPLICATE_FINDING": 1430,
+    "VALID_AND_UNRECOVERABLE": 34790
+  },
+  "cleaning_status": "CLEAN_WITH_DOCUMENTED_EXCEPTIONS",
+  "dataset_baseline_version": "data-quality-v1",
+  "detection_rows": 1473,
+  "duplicate_rows": 1430,
+  "event_rows": 62430,
+  "quarantine_affected_rows": 29536,
+  "quarantine_finding_per_affected_row": 1.2263,
+  "quarantine_rows": 36220,
+  "reason_counts": {
+    "BYTES_OUT_OF_RANGE": 3057,
+    "DUPLICATE_RECORD": 1430,
+    "HASH_FORMAT_INVALID": 815,
+    "IP_ADDRESS_INVALID": 19860,
+    "PORT_OUT_OF_RANGE": 6732,
+    "RESOLUTION_BEFORE_DETECTION": 268,
+    "RISK_NON_NUMERIC": 1384,
+    "RISK_OUT_OF_RANGE": 2674
+  },
+  "risk_user_rows": 3000,
+  "source_affected_rows": {
+    "endpoint": 1277,
+    "firewall": 17478,
+    "iam": 10691,
+    "identity": 90
+  },
+  "source_record_counts": {
+    "endpoint": 8240,
+    "firewall": 30600,
+    "iam": 20500,
+    "identity": 3090
+  }
+}

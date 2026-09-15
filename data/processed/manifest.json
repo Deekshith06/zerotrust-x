@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "dataset_version": "data-quality-v1",
+    "pipeline_status": "CLEAN_WITH_DOCUMENTED_EXCEPTIONS",
+    "source_hashes": {
+      "track2_endpoint_alerts.xlsx": "3805c86d766ebf99a18d0ca84c7a4ae7911c5247470bba20c8828528b3939bea",
+      "track2_firewall_logs.csv": "96c4a554e7e9116cc3faebcd08245ff6eb24ae02b4cb80ec30c1d54737c0e826",
+      "track2_iam_audit_trail.json": "5016539cc749469c5aca6bdc2324f957052445a45ae9c92f2271a5df0dde1649",
+      "track2_identity_asset_master.csv": "e205dbdfc6cb143eafd58e5abd155f34d2a9a22eefb338c9f6921f793be478b0"
+    }
+  },
+  "context_inputs": {
+    "track2_dataset_notes.txt": "f52b4a5dead99547c6270f3f76ea0a15c6ffb1b258e4fafe6d9c7c2702143ce3"
+  },
+  "dataset_baseline_version": "data-quality-v1",
+  "event_schema_version": "unified-event-v2",
+  "inputs": {
+    "track2_endpoint_alerts.xlsx": "3805c86d766ebf99a18d0ca84c7a4ae7911c5247470bba20c8828528b3939bea",
+    "track2_firewall_logs.csv": "96c4a554e7e9116cc3faebcd08245ff6eb24ae02b4cb80ec30c1d54737c0e826",
+    "track2_iam_audit_trail.json": "5016539cc749469c5aca6bdc2324f957052445a45ae9c92f2271a5df0dde1649",
+    "track2_identity_asset_master.csv": "e205dbdfc6cb143eafd58e5abd155f34d2a9a22eefb338c9f6921f793be478b0"
+  },
+  "iteration_id": "unattributed-run",
+  "manifest_schema_version": "2",
+  "normalization_rule_version": "normalize-2026-09-14-v2",
+  "outputs": {
+    "clean_events": "88a6868dcb35abbc423b5fd9746c95440517075febd182c3e3cb6a5157993353",
+    "data_quality": "de0211d64bcc020205cd3306de73edeb32c96867fc404fb2f554b098d8d2ec5e",
+    "detections": "694b0ed17b9b8cf4d42c024a753dcc6943fcaa21a1d1fd087350eecbf933b25c",
+    "events": "d791a5e1d0793bae959559ddb4758ec4afaa85d63cc173fa9609494ee9513142",
+    "quarantine": "504154a45b25c8c9dfe498c223b9d2bf4f41886b344ec0bc89960e905549f349",
+    "user_risk": "038a9671e7e93551e8fe39b56954b6ab7e71c6cf6a8559d1327825c7fade3508"
+  },
+  "pipeline_version": "0.1.0",
+  "quality": {
+    "classification_counts": {
+      "DUPLICATE_FINDING": 1430,
+      "VALID_AND_UNRECOVERABLE": 34790
+    },
+    "cleaning_status": "CLEAN_WITH_DOCUMENTED_EXCEPTIONS",
+    "dataset_baseline_version": "data-quality-v1",
+    "detection_rows": 1473,
+    "duplicate_rows": 1430,
+    "event_rows": 62430,
+    "quarantine_affected_rows": 29536,
+    "quarantine_finding_per_affected_row": 1.2263,
+    "quarantine_rows": 36220,
+    "reason_counts": {
+      "BYTES_OUT_OF_RANGE": 3057,
+      "DUPLICATE_RECORD": 1430,
+      "HASH_FORMAT_INVALID": 815,
+      "IP_ADDRESS_INVALID": 19860,
+      "PORT_OUT_OF_RANGE": 6732,
+      "RESOLUTION_BEFORE_DETECTION": 268,
+      "RISK_NON_NUMERIC": 1384,
+      "RISK_OUT_OF_RANGE": 2674
+    },
+    "risk_user_rows": 3000,
+    "source_affected_rows": {
+      "endpoint": 1277,
+      "firewall": 17478,
+      "iam": 10691,
+      "identity": 90
+    },
+    "source_record_counts": {
+      "endpoint": 8240,
+      "firewall": 30600,
+      "iam": 20500,
+      "identity": 3090
+    }
+  }
+}

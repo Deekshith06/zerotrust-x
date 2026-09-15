@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: zerotrust-x
+    runtime: docker
+    plan: free
+    envVars:
+      - key: ZEROTRUST_ENV
+        value: demo
+      - key: ZEROTRUST_HOST
+        value: 0.0.0.0
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "120"
+      - key: MAX_QUERY_LIMIT
+        value: "1000"
