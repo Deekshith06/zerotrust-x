@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/index.py": {
-      "includeFiles": "{src/**,data/**}"
+      "runtime": "python3.12",
+      "includeFiles": ["src/**", "data/**"]
     }
   },
   "rewrites": [
