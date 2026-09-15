@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "zerotrust-x"
 version = "0.1.0"
 description = "Deterministic multi-source security telemetry foundation"
-requires-python = ">=3.14,<3.15"
+requires-python = ">=3.11"
 dependencies = ["fastapi>=0.115", "openpyxl>=3.1", "polars>=1.0", "pyarrow>=17.0", "uvicorn>=0.30"]
 
 [project.optional-dependencies]

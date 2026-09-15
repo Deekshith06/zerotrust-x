@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import replace
 from pathlib import Path
 from typing import Any
@@ -37,10 +38,12 @@ from zerotrust_x.scenarios import get_scenario, list_scenarios
 
 def create_app(processed_dir: Path = Path("data/processed")) -> FastAPI:
     app = FastAPI(title="ZeroTrust-X SOC API", version="0.1.0")
+    audit_override = os.getenv("ZEROTRUST_AUDIT_PATH")
+    actual_audit_path = Path(audit_override) if audit_override else processed_dir.parent / "audit-chain.jsonl"
     settings = replace(
         load_settings(),
         processed_dir=processed_dir,
-        audit_path=processed_dir.parent / "audit-chain.jsonl",
+        audit_path=actual_audit_path,
     )
     limiter = LocalRateLimiter(limit=settings.rate_limit_per_minute)
     app.add_middleware(
